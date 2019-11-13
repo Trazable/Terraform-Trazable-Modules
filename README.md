@@ -1,37 +1,20 @@
-## Welcome to GitHub Pages
+# Terraform-Trazable-Modules
 
-You can use the [editor on GitHub](https://github.com/Trazable/Terraform-Trazable-Modules/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Terraform trazable modules, centralized repository to manage terraform modules.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## How to use
 
-### Markdown
+To invoke the desired modules to your infrastructure you should use the next example in your code:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```
+module "desired_module_name" {
+  source = "github.com/Trazable/Terraform-Trazable-Modules/modules/{provider}/{module}"
+}
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Terraform module documentation: https://www.terraform.io/docs/modules/index.html
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Trazable/Terraform-Trazable-Modules/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## Built With
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+* [Terraform](https://www.terraform.io/) - Terraform infrastructure as code tool
