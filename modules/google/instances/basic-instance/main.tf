@@ -3,6 +3,7 @@ variable "machine_type" {}
 variable "google_zone" {}
 variable "google_project_id" {}
 variable "machine_image" {}
+variable "user_data_file" {}
 
 resource "google_compute_instance" "compute_instance" {
   name                      = var.instance_name
@@ -22,5 +23,6 @@ resource "google_compute_instance" "compute_instance" {
 
   metadata = {
     google-logging-enabled = true
+    user-data = file(var.user_data_file)
   }
 }
