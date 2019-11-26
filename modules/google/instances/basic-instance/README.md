@@ -9,3 +9,7 @@ Basic template instance to create a vm machine in google cloud platform
   - google_zone (string)
   - google_project_id (string)
   - machine_image (string) - Example: "cos-cloud/cos-stable"
+  
+## Outputs
+
+  - vm_machine_address - Output of the external ip address of one machine
