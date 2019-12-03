@@ -5,6 +5,7 @@ variable "google_project_id" {}
 variable "machine_image" {}
 variable "user_data_file" {}
 variable "service_accounts_scopes" { type = list }
+variable "internal_address" {}
 
 resource "google_compute_instance" "compute_instance" {
   name                      = var.instance_name
@@ -17,7 +18,8 @@ resource "google_compute_instance" "compute_instance" {
     }
   }
   network_interface {
-    network = "default"
+    network    = "default"
+    network_ip = var.internal_address
     access_config {
     }
   }
