@@ -6,11 +6,16 @@ variable "machine_image" {}
 variable "user_data_file" {}
 variable "service_accounts_scopes" { type = list }
 variable "internal_address" {}
+variable "allow_stop_update" { 
+  type = bool 
+  default = true
+}
 
 resource "google_compute_instance" "compute_instance" {
   name                      = var.instance_name
   machine_type              = var.machine_type
   zone                      = var.google_zone
+  allow_stopping_for_update = var.allow_stop_update
 
   boot_disk {
     initialize_params {
@@ -26,7 +31,7 @@ resource "google_compute_instance" "compute_instance" {
 
   metadata = {
     google-logging-enabled = true
-    user-data = file(var.user_data_file)
+    user-data              = file(var.user_data_file)
   }
 
   service_account {
