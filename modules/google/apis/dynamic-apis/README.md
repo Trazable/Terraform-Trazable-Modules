@@ -1,4 +1,4 @@
-# Google APIS module
+# Google Dynamic-APIS module
 
 This module allows the dynamically creation of the google cloud platform api services.
 
