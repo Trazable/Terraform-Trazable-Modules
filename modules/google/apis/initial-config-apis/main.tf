@@ -16,7 +16,7 @@ resource "google_project_service" "project_compute" {
   disable_on_destroy = true
   disable_dependent_services = true
 
-  depends_on = ["google_project_service.project_cloud"]
+  depends_on = [google_project_service.project_cloud]
 }
 
 resource "google_project_service" "project_iam" {
@@ -25,7 +25,7 @@ resource "google_project_service" "project_iam" {
   disable_on_destroy = true
   disable_dependent_services = true
 
-  depends_on = ["google_project_service.project_cloud"]
+  depends_on = [google_project_service.project_cloud]
 }
 
 resource "google_project_service" "project_app_engine" {
@@ -34,7 +34,7 @@ resource "google_project_service" "project_app_engine" {
   disable_on_destroy = true
   disable_dependent_services = true
 
-  depends_on = ["google_project_service.project_cloud"]
+  depends_on = [google_project_service.project_cloud]
 }
 
 resource "google_project_service" "project_app_kms" {
@@ -43,5 +43,5 @@ resource "google_project_service" "project_app_kms" {
   disable_on_destroy = true
   disable_dependent_services = true
 
-  depends_on = ["google_project_service.project_cloud"]
+  depends_on = [google_project_service.project_cloud]
 }

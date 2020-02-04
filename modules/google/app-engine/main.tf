@@ -23,7 +23,7 @@ resource "google_app_engine_standard_app_version" "initial_version" {
       source_url = "https://storage.googleapis.com/${google_storage_bucket.standard_app_bucket.name}/${google_storage_bucket_object.standard_app_bucket_object.name}"
     }
   }
-  depends_on = ["google_app_engine_application.app_engine_application"]
+  depends_on = [google_app_engine_application.app_engine_application]
 }
 
 resource "google_storage_bucket" "standard_app_bucket" {
