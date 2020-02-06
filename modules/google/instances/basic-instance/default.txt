@@ -1,0 +1,1 @@
+# Default .txt file, you can create a cloud-init file to do operations when the machine is created.
